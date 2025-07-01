@@ -1,0 +1,121 @@
+/* Background & Layout */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Glowing Rotating Border */
+  .glow-wrapper {
+    position: relative;
+    padding: 5px;
+    border-radius: 25px;
+    background: transparent;
+    overflow: hidden;
+  }
+  
+  .glow-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: conic-gradient(
+      from 0deg,
+      #00ffff,
+      transparent 90deg,
+      #00ffff,
+      transparent 180deg,
+      #00ffff,
+      transparent 360deg,
+      #00ffff
+    );
+    animation: rotateLight 4s linear infinite;
+    z-index: -1;
+    filter: blur(90px);
+    border-radius: 25px;
+  }
+  
+  @keyframes rotateLight {
+    0% {
+      transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+  }
+  
+  /* Calculator Styling */
+  .calculator {
+    background: #1e1e2f;
+    padding: 25px;
+    border-radius: 20px;
+    width: 340px;
+    z-index: 1;
+  }
+  
+  #display {
+    width: 90%;
+    padding: 15px;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+    background: #2a2a3a;
+    color: #00ffff;
+  }
+  
+  /* Buttons Grid */
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  
+  /* Button Styles */
+  .btn {
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background: #444;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+  }
+  
+  .btn:hover {
+    background: #555;
+    transform: scale(1.05);
+  }
+  
+  .operator {
+    background: #3f51b5;
+  }
+  
+  .operator:hover {
+    background: #5c6bc0;
+  }
+  
+  .control {
+    background: #e74c3c;
+  }
+  
+  .control:hover {
+    background: #ff6b61;
+  }
+  
+  .equal {
+    background: #00b894;
+  }
+  
+  .equal:hover {
+    background: #00cec9;
+  }
+  
