@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeAlpha Internship Tasks</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+      background-size: 200% 200%;
+      animation: gradient 10s ease infinite;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    .tasks {
+      display: grid;
+      gap: 20px;
+      padding: 20px;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .task {
+      background: rgba(0,0,0,0.2);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .task:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-5px);
+    }
+
+    .task a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #00d2ff;
+      color: #000;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .task a:hover {
+      background: #00b4d8;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      .task a {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🚀 CodeAlpha Internship Tasks</h1>
+
+  <div class="tasks">
+    <div class="task">
+      <h2>🖼️ Task 1: Image Gallery</h2>
+      <a href="task-1-gallery/index.html" target="_blank">View Project</a>
+    </div>
+
+    <div class="task">
+      <h2>🎵 Task 2: Music Player</h2>
+      <a href="task-2-player/index.html" target="_blank">View Project</a>
+    </div>
+
+    <div class="task">
+      <h2>🧮 Task 3: Calculator</h2>
+      <a href="task-3-calculator/index.html" target="_blank">View Project</a>
+    </div>
+  </div>
+
+</body>
+</html>
